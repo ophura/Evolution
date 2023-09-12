@@ -1,6 +1,6 @@
-namespace Uselessness;
-
 using System.Collections.Generic;
+
+namespace Uselessness;
 
 internal static class Evolution
 {
