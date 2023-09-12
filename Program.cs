@@ -1,21 +1,12 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Uselessness;
 
-static void Print<T>(IEnumerable<T> collection)
+static void Print<T>(IEnumerable<T> sequence)
 {
-    var count = collection.Count() - 2;
-    var index = -1;
-
-    foreach (var item in collection)
-    {
-        Console.Write(item);
-        
-        if (index++ < count) Console.Write(", ");
-    }
-
-    Console.WriteLine('\n');
+    var output = string.Join(", ", sequence);
+    
+    Console.WriteLine(output);
 }
 
 var array = new int[50]
