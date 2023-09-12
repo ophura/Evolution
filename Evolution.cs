@@ -10,7 +10,7 @@ internal static class Evolution
 
         for (var i = 0; i < source.Length; i++)
         {
-            if (i % 2 == 1)
+            if (i % 2 != 0)
             {
                 array[i / 2] = source[i];
             }
