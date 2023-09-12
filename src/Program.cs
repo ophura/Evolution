@@ -1,13 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Uselessness;
 
-static void Print<T>(IEnumerable<T> sequence)
-{
-    var output = string.Join(", ", sequence);
-    
-    Console.WriteLine(output);
-}
+static void Print<T>(IEnumerable<T> sequence) =>
+    Console.WriteLine(string.Join(", ", sequence));
 
 var array = new int[50]
 {
