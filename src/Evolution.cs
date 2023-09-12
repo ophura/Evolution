@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace Uselessness;
 
@@ -48,7 +48,7 @@ internal static class Evolution
 
             isOddIndexed = !isOddIndexed;
         }
-        
+
         return list;
     }
 
@@ -56,7 +56,7 @@ internal static class Evolution
     {
         var list = new List<T>(source.Count / 2);
 
-        for (var i = 1; i < source.Count; i += 2)
+        for (var i = 1; i < source.Count; i++, i++)
         {
             list.Add(source[i]);
         }
