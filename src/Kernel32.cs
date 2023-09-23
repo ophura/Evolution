@@ -130,7 +130,7 @@ internal static partial class Kernel32
         {
             fixed (char* fontName = FontName)
             {
-                return Marshal.PtrToStringUTF8((nint)fontName);
+                return new string(fontName);
             }
         }
     }
