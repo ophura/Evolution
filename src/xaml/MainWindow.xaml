@@ -27,8 +27,8 @@
             WinFX:Key="TitleBarButtonStyle"
         >
             <Setter
-		        Property="Foreground"
-		        Value="{DynamicResource WindowTextBrush}"
+		Property="Foreground"
+		Value="{DynamicResource WindowTextBrush}"
             />
             <Setter
                 Property="Padding"
