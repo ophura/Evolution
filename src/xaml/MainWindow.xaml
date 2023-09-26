@@ -28,8 +28,8 @@
                 WinFX:Key="TitleBarButtonStyle"
             >
                 <Setter
-		            Property="Foreground"
-		            Value="{WinFX:Static SystemColors.WindowTextBrush}"
+		    Property="Foreground"
+		    Value="{WinFX:Static SystemColors.WindowTextBrush}"
                 />
                 <Setter
                     Property="Padding"
