@@ -22,147 +22,149 @@
     </WindowChrome.WindowChrome>
     
     <Window.Resources>
-        <Style
-            TargetType="Button"
-            WinFX:Key="TitleBarButtonStyle"
-        >
-            <Setter
-		Property="Foreground"
-		Value="{WinFX:Static SystemColors.WindowTextBrush}"
-            />
-            <Setter
-                Property="Padding"
-                Value="0"
-            />
-            <Setter
-                Property="WindowChrome.IsHitTestVisibleInChrome"
-                Value="True"
-            />
-            <Setter
-                Property="IsTabStop"
-                Value="False"
-            />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{WinFX:Type Button}">
-                        <Border
-                            BorderThickness="0"
-                            WinFX:Name="border"
-                            Background="Transparent"
-                            SnapsToDevicePixels="True"
-                        >
-                            <ContentPresenter
-                                Margin="0"
-                                Focusable="False"
-                                VerticalAlignment="Center"
-                                RecognizesAccessKey="True"
-                                HorizontalAlignment="Center"
-                                WinFX:Name="contentPresenter"
-                            />
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger
-                                Property="IsMouseOver"
-                                Value="True"
+        <ResourceDictionary>
+            <Style
+                TargetType="Button"
+                WinFX:Key="TitleBarButtonStyle"
+            >
+                <Setter
+		            Property="Foreground"
+		            Value="{WinFX:Static SystemColors.WindowTextBrush}"
+                />
+                <Setter
+                    Property="Padding"
+                    Value="0"
+                />
+                <Setter
+                    Property="WindowChrome.IsHitTestVisibleInChrome"
+                    Value="True"
+                />
+                <Setter
+                    Property="IsTabStop"
+                    Value="False"
+                />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{WinFX:Type Button}">
+                            <Border
+                                BorderThickness="0"
+                                WinFX:Name="border"
+                                Background="Transparent"
+                                SnapsToDevicePixels="True"
                             >
-                                <Setter
-                                    TargetName="border"
-                                    Property="Background"
-                                    Value="{DynamicResource MouseOverOverlayBackgroundBrush}"
+                                <ContentPresenter
+                                    Margin="0"
+                                    Focusable="False"
+                                    VerticalAlignment="Center"
+                                    RecognizesAccessKey="True"
+                                    HorizontalAlignment="Center"
+                                    WinFX:Name="contentPresenter"
+                                />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger
+                                    Property="IsMouseOver"
+                                    Value="True"
+                                >
+                                    <Setter
+                                        TargetName="border"
+                                        Property="Background"
+                                        Value="{DynamicResource MouseOverOverlayBackgroundBrush}"
                                     />
-                            </Trigger>
-                            <Trigger
-                                Property="IsPressed"
-                                Value="True"
-                            >
-                                <Setter
-                                    TargetName="border"
-                                    Property="Background"
-                                    Value="{DynamicResource PressedOverlayBackgroundBrush}"
-                                />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+                                </Trigger>
+                                <Trigger
+                                    Property="IsPressed"
+                                    Value="True"
+                                >
+                                    <Setter
+                                        TargetName="border"
+                                        Property="Background"
+                                        Value="{DynamicResource PressedOverlayBackgroundBrush}"
+                                    />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
 
-        <Style
-            TargetType="Button"
-            WinFX:Key="TitleBarCloseButtonStyle"
-        >
-            <Setter
-                Property="Foreground"
-                Value="{DynamicResource {WinFX:Static SystemColors.ControlTextBrushKey}}"
-            />
-            <Setter
-                Property="Padding"
-                Value="0"
-            />
-            <Setter
-                Property="WindowChrome.IsHitTestVisibleInChrome"
-                Value="True"
-            />
-            <Setter
-                Property="IsTabStop"
-                Value="False"
-            />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{WinFX:Type Button}">
-                        <Border
-                            BorderThickness="0"
-                            WinFX:Name="border"
-                            Background="Transparent"
-                            SnapsToDevicePixels="True"
-                        >
-                            <ContentPresenter
-                                Margin="0"
-                                Focusable="False"
-                                VerticalAlignment="Center"
-                                RecognizesAccessKey="True"
-                                HorizontalAlignment="Center"
-                                WinFX:Name="contentPresenter"
-                            />
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger
-                                Property="IsMouseOver"
-                                Value="True"
+            <Style
+                TargetType="Button"
+                WinFX:Key="TitleBarCloseButtonStyle"
+            >
+                <Setter
+                    Property="Foreground"
+                    Value="{DynamicResource {WinFX:Static SystemColors.ControlTextBrushKey}}"
+                />
+                <Setter
+                    Property="Padding"
+                    Value="0"
+                />
+                <Setter
+                    Property="WindowChrome.IsHitTestVisibleInChrome"
+                    Value="True"
+                />
+                <Setter
+                    Property="IsTabStop"
+                    Value="False"
+                />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{WinFX:Type Button}">
+                            <Border
+                                BorderThickness="0"
+                                WinFX:Name="border"
+                                Background="Transparent"
+                                SnapsToDevicePixels="True"
                             >
-                                <Setter
-                                    TargetName="border"
-                                    Property="Background"
-                                    Value="{DynamicResource
-                                    MouseOverWindowCloseButtonBackgroundBrush}"
+                                <ContentPresenter
+                                    Margin="0"
+                                    Focusable="False"
+                                    VerticalAlignment="Center"
+                                    RecognizesAccessKey="True"
+                                    HorizontalAlignment="Center"
+                                    WinFX:Name="contentPresenter"
                                 />
-                                <Setter
-                                    Property="Foreground"
-                                    Value="{DynamicResource
-                                    MouseOverWindowCloseButtonForegroundBrush}"
-                                />
-                            </Trigger>
-                            <Trigger
-                                Property="IsPressed"
-                                Value="True"
-                            >
-                                <Setter
-                                    TargetName="border"
-                                    Property="Background"
-                                    Value="{DynamicResource
-                                    PressedWindowCloseButtonBackgroundBrush}"
-                                />
-                                <Setter
-                                    Property="Foreground"
-                                    Value="{DynamicResource
-                                    MouseOverWindowCloseButtonForegroundBrush}"
-                                />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger
+                                    Property="IsMouseOver"
+                                    Value="True"
+                                >
+                                    <Setter
+                                        TargetName="border"
+                                        Property="Background"
+                                        Value="{DynamicResource
+                                        MouseOverWindowCloseButtonBackgroundBrush}"
+                                    />
+                                    <Setter
+                                        Property="Foreground"
+                                        Value="{DynamicResource
+                                        MouseOverWindowCloseButtonForegroundBrush}"
+                                    />
+                                </Trigger>
+                                <Trigger
+                                    Property="IsPressed"
+                                    Value="True"
+                                >
+                                    <Setter
+                                        TargetName="border"
+                                        Property="Background"
+                                        Value="{DynamicResource
+                                        PressedWindowCloseButtonBackgroundBrush}"
+                                    />
+                                    <Setter
+                                        Property="Foreground"
+                                        Value="{DynamicResource
+                                        MouseOverWindowCloseButtonForegroundBrush}"
+                                    />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
     </Window.Resources>
 
     <Grid>
