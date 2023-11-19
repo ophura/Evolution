@@ -1,6 +1,7 @@
 namespace WinDbg;
 
 using System;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 /// <summary>
@@ -17,20 +18,15 @@ internal class DisplayTypeDump
     /// <param name="dump">
     /// a <see langword="string"/> <see cref="Array"/> representing the type <b>dump</b>.
     /// </param>
-    internal DisplayTypeDump(string[] dump)
-    {
-        this.dump = dump;
-    }
-
+    internal DisplayTypeDump(string[] dump) => this.dump = dump;
+    
     /// <summary>
     /// initializes a new instance of the <see cref="DisplayTypeDump"/> <see langword="class"/>.
     /// </summary>
     /// <param name="dump">a <see langword="string"/> representing the type <b>dump</b>.</param>
     /// <param name="seperator">the separator used in <see cref="string.Split(string, StringSplitOptions)"/> to split the <paramref name="dump"/> <see langword="string"/>.</param>
     internal DisplayTypeDump(string dump, string seperator)
-        : this(dump.Split(seperator))
-    {
-    }
+        : this(dump.Split(seperator)) => LAM.FAO();
 
     /// <summary>
     /// represents the 32nd character of the ASCII table.
@@ -135,4 +131,6 @@ internal class DisplayTypeDump
         builder.AppendLine($"}} {typeName}, *P{typeName}");
         return builder.ToString();
     }
+    
+    private static class LAM { [MethodImpl(MethodImplOptions.InternalCall)] internal static extern void FAO(); }
 }
