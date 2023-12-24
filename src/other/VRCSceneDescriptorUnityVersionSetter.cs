@@ -33,7 +33,15 @@ internal static class VRCSceneDescriptorUnityVersionSetter
 
         static void SetUnityVersion(VRCSceneDescriptor VRCene, string version)
         {
-            Undo.RecordObject(VRCene, $"{VRCene.name}.unityVersion changed");
+            Undo.RecordObject(
+                VRCene,
+                string.Format(
+                    "{0}.{1}.unityVersion changed",
+                    VRCene.name,
+                    nameof(VRCSceneDescriptor)
+                )
+            );
+
             VRCene.unityVersion = version;
             EditorUtility.SetDirty(VRCene);
         }
