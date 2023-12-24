@@ -1,4 +1,4 @@
-#if VRC_SDK_VRCSDK3
+#if UNITY_EDITOR && VRC_SDK_VRCSDK3
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
