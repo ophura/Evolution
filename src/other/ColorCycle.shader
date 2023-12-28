@@ -17,7 +17,7 @@ Pass { CGPROGRAM
 #pragma vertex VSMain
 #pragma fragment FSMain
 
-uniform int index;
+//uniform int index;
 uniform float alpha, speed;
 
 // RGBA Color Model
